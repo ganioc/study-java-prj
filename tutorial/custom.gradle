@@ -1,0 +1,43 @@
+description = "My test of gradle"
+println "${project.description}"
+ext {
+  outputlang="English"
+}
+println "${project.outputlang}"
+ext.author="Spike"
+
+println "${project.author}"
+
+defaultTasks  "display"
+
+task display {
+  description = "Display Task for demo."
+  doFirst{
+    println "display task"
+    println "${description}"
+  }
+  doLast{
+    println "display ended."
+  }
+}
+
+task clean{
+  doFirst{
+    println "clean task"
+  }
+
+}
+
+task compile{
+  doFirst{
+    println "compile task"
+  }
+}
+
+compile.dependsOn "clean"
+
+task ("package", dependsOn: "compile"){
+  doFirst{
+    println "package task"
+  }
+}
