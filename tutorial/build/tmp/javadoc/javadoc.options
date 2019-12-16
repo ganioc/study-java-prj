@@ -1,0 +1,8 @@
+-classpath '/Users/yangjun/Documents/yangj/prj/study-java-prj/tutorial/build/classes/java/main:/Users/yangjun/Documents/yangj/prj/study-java-prj/tutorial/build/resources/main'
+-d '/Users/yangjun/Documents/yangj/prj/study-java-prj/tutorial/build/docs/javadoc'
+-doctitle 'tutorial API'
+-notimestamp 
+-quiet 
+-windowtitle 'tutorial API'
+'/Users/yangjun/Documents/yangj/prj/study-java-prj/tutorial/src/main/java/rfclib/Hello.java'
+'/Users/yangjun/Documents/yangj/prj/study-java-prj/tutorial/src/main/java/App.java'

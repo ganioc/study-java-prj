@@ -1,5 +1,9 @@
-package app.rfclib;
+package main.java.rfclib;
 
+/**
+ * 
+ * @author 'Yang o3'
+ */
 public class Hello {
   private int num = 0;
 

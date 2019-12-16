@@ -1,4 +1,5 @@
 description = "My test of gradle"
+
 println "${project.description}"
 ext {
   outputlang="English"
@@ -24,6 +25,7 @@ task display {
 task clean{
   doFirst{
     println "clean task"
+    delete 'dist'
   }
 
 }
@@ -39,5 +41,33 @@ compile.dependsOn "clean"
 task ("package", dependsOn: "compile"){
   doFirst{
     println "package task"
+  }
+}
+
+
+
+task copyTask(type:Copy){
+  from 'src'
+  into 'dist/orig'
+  doFirst{
+    println 'copyTask'
+  }
+}
+
+task showVersion(type:Exec){
+  commandLine 'ls'
+}
+
+task archiveTask(type:Zip, dependsOn: copyTask){
+  
+  from 'dist/orig'
+  into 'dist'
+  baseName 'orig'
+  destinationDir file('dist')
+  doFirst{
+    println 'begin to archive'
+  }
+  doLast{
+    println 'archive to  orig.zip finished'
   }
 }

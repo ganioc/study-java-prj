@@ -1,0 +1,25 @@
+apply plugin: 'java'
+
+jar {
+  manifest{
+    attributes (
+      'Main-Class': 'App',
+      'Implementation-Title': project.name,
+      'Developer': 'Yango3'
+      )
+
+  }
+}
+
+sourceSets{
+  main{
+    java{
+      srcDir 'source/java'
+    }
+  }
+  test{
+    java{
+      srcDir 'source/test'
+    }
+  }
+}

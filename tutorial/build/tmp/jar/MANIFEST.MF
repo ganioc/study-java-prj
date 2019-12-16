@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Implementation-Title: tutorial
+Developer: Yango3
+Main-Class: App
+
